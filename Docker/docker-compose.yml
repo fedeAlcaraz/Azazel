@@ -1,0 +1,26 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: Docker/api/Dockerfile
+    container_name: azazel-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:17
+    container_name: azazel-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+volumes:
+  postgres_data:
