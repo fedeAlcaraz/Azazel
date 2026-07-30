@@ -2,8 +2,8 @@
 Empiezo este repositorio con la idea de hacer un proyecto con el que me pueda distraer. La idea de esto es desarrollar un asistente personal con una variedad de caracteristicas y funcionalidades utiles para mis demás proyectos, hobbies, o cualquier objetivo que tenga en mente. Entre las tecnologías que planeo utilizar se encuentran Ollama, PostgreSQL, Python, Docker, .NET C#, WebApi, Administrar y configurar servidores, entre otros que se me van a ocurrir constantemente. 
 
 ```text
-⠀⠀⠀⢀⡤⣶⣿⣿⢛⣷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣿⣟⢿⣿⡗⡦⣄⠀⠀⠀
-⠀⠀⣰⡿⡷⡜⢟⣷⣟⣽⣾⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣦⣝⣿⣿⢟⡴⡽⣧⡀⠀
+⠀⠀⠀⢀⡤⣶⣿⣿⢛⣷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⠀⢀⣤⣿⣟⢿⣿⡗⡦⣄⠀⠀⠀
+⠀⠀⣰⡿⡷⡜⢟⣷⣟⣽⣾⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⠀⢀⣾⣿⣿⣦⣝⣿⣿⢟⡴⡽⣧⡀⠀
 ⠀⡼⢟⢿⡟⡜⡜⣿⣿⣿⢟⡭⢛⣿⣦⣀⣀⣀⣀⣀⠀⢀⣠⡤⠤⠤⠤⣄⣀⠀⣀⣀⣀⣀⣀⣠⣾⣟⠫⣛⢿⣿⣿⣏⡎⣜⣼⢟⠷⡀
 ⣸⣭⣿⣿⣿⣾⠟⢻⣟⣯⠋⡰⢫⢋⢟⣟⠝⢉⠟⣩⠟⠉⠀⠀⠀⠀⠀⠀⠉⠙⢯⡙⢍⠛⡝⡟⣌⢫⠳⡈⢪⣟⣿⠛⢿⣿⣿⣟⣯⣿
 ⡯⠐⣛⣿⣏⠁⠀⠀⢻⡏⢰⢁⠇⡜⡜⡸⢀⣮⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⡌⡆⠸⠸⠸⡌⠇⢡⠘⡿⠃⠀⠀⢙⣿⣟⡓⢬
@@ -22,3 +22,4 @@ Empiezo este repositorio con la idea de hacer un proyecto con el que me pueda di
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⡉⢉⣹⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ```
+q lees puto
