@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OPFKP82oSjY=",
+  "dgSpecHash": "2ISFgKRinqg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\feder\\OneDrive\\Escritorio\\Azazel\\src\\Azazel_api\\Azazel_api.csproj",
+  "projectFilePath": "C:\\Users\\feder\\OneDrive\\Escritorio\\Azazel\\src\\azazel_api\\Azazel_api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\feder\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
     "C:\\Users\\feder\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
@@ -11,10 +11,10 @@
     {
       "code": "NU1903",
       "level": "Warning",
-      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "C:\\Users\\feder\\OneDrive\\Escritorio\\Azazel\\src\\Azazel_api\\Azazel_api.csproj",
+      "message": "El paquete \"Microsoft.OpenApi\" 2.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "C:\\Users\\feder\\OneDrive\\Escritorio\\Azazel\\src\\azazel_api\\Azazel_api.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\feder\\OneDrive\\Escritorio\\Azazel\\src\\Azazel_api\\Azazel_api.csproj",
+      "filePath": "C:\\Users\\feder\\OneDrive\\Escritorio\\Azazel\\src\\azazel_api\\Azazel_api.csproj",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"
