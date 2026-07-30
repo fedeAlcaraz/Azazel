@@ -4,6 +4,7 @@ services:
       context: ..
       dockerfile: Docker/api/Dockerfile
     container_name: azazel-api
+    restart: unless-stopped
     ports:
       - "8080:8080"
     depends_on:
@@ -11,6 +12,7 @@ services:
   postgres:
     image: postgres:17
     container_name: azazel-postgres
+    restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
