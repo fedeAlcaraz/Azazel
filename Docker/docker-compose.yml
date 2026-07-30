@@ -9,6 +9,10 @@ services:
       - "8080:8080"
     depends_on:
       - postgres
+      - ollama
+    networks:
+      - azazel-network
+
   postgres:
     image: postgres:17
     container_name: azazel-postgres
@@ -21,8 +25,25 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./DB/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - azazel-network
 
+  ollama:
+    image: ollama/ollama:latest
+    container_name: azazel-ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - azazel-network
 
 volumes:
   postgres_data:
+  ollama_data:
+
+networks:
+  azazel-network:
+    driver: bridge
