@@ -1,0 +1,3 @@
+La funcion principal de este directorio es la de generar nuevas implementaciones en la base de datos
+a lo largo del tiempo, sin tener que iniciarla desde cero. Las mismas seran añadidas a init.sql en el 
+momento en el que considere que la db este lo suficientemente desarrollada.
