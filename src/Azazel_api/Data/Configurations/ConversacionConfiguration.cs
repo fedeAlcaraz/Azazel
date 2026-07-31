@@ -1,1 +1,0 @@
-namespace Azazel_api.Data;

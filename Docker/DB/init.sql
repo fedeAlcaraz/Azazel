@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS conversaciones(
     id_conversacion SERIAL PRIMARY KEY,
     dir VARCHAR(100) NOT NULL,
     date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    date_lastMessage TIMESTAMP NOT NULL
+    date_lastMessage TIMESTAMP NULL
 );
 CREATE TABLE IF NOT EXISTS memorias(
     id_memoria SERIAL PRIMARY KEY,
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS mensajes(
     fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE IF NOT EXISTS modelosIA(
+    id_ia SERIAL PRIMARY KEY,
     nombre VARCHAR(40) NOT NULL,
-    id_ia INT NOT NULL,
     activo BOOLEAN NOT NULL
 );
