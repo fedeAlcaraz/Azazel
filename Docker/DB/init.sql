@@ -25,3 +25,17 @@ CREATE TABLE IF NOT EXISTS acciones(
     time_response INTERVAL,
     fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE IF NOT EXISTS mensajes(
+    id_mensaje SERIAL PRIMARY KEY,
+    id_conversacion,
+    FOREIGN KEY (id_conversacion) REFERENCES conversaciones(id_conversacion),
+    emisor BOOLEAN,
+    contenido TEXT,
+    success BOOLEAN,
+    fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS modelosIA(
+    nombre VARCHAR(40),
+    id_ia INT
+    activo BOOLEAN
+);

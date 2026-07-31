@@ -1,5 +1,5 @@
-namespace Azazel_api.Models;
-public class UsuarioModel
+namespace Azazel_api.DTOs;
+public class UsuarioDTO
 {
     public string Nombre {get; set;}
     public int IdUsuario {get; set;}
