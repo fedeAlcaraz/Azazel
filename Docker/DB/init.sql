@@ -1,41 +1,41 @@
 CREATE TABLE IF NOT EXISTS usuarios(
     id_usuario SERIAL PRIMARY KEY,
-    Nombre VARCHAR(40)
+    Nombre VARCHAR(40) NOT NULL
 );
 CREATE TABLE IF NOT EXISTS conversaciones(
     id_conversacion SERIAL PRIMARY KEY,
-    dir VARCHAR(100),
-    date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    date_lastMessage TIMESTAMP
+    dir VARCHAR(100) NOT NULL,
+    date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    date_lastMessage TIMESTAMP NOT NULL
 );
 CREATE TABLE IF NOT EXISTS memorias(
     id_memoria SERIAL PRIMARY KEY,
-    dir VARCHAR(100),
-    id_conversacion INT,
+    dir VARCHAR(100) NOT NULL,
+    id_conversacion INT NOT NULL,
     FOREIGN KEY (id_conversacion) REFERENCES conversaciones(id_conversacion)
 );
 CREATE TABLE IF NOT EXISTS acciones(
     id_accion SERIAL PRIMARY KEY,
-    id_usuario,
-    id_conversacion,
+    id_usuario INT NOT NULL,
+    id_conversacion INT NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
     FOREIGN KEY (id_conversacion) REFERENCES conversaciones(id_conversacion),
-    tipo VARCHAR(20),
-    success BOOLEAN,
-    time_response INTERVAL,
+    tipo VARCHAR(20) NOT NULL,
+    success BOOLEAN NOT NULL,
+    time_response INTERVAL NOT NULL,
     fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE IF NOT EXISTS mensajes(
     id_mensaje SERIAL PRIMARY KEY,
-    id_conversacion,
+    id_conversacion INT NOT NULL,
     FOREIGN KEY (id_conversacion) REFERENCES conversaciones(id_conversacion),
-    emisor BOOLEAN,
-    contenido TEXT,
-    success BOOLEAN,
+    emisor BOOLEAN NOT NULL,
+    contenido TEXT NOT NULL,
+    success BOOLEAN NOT NULL,
     fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE IF NOT EXISTS modelosIA(
-    nombre VARCHAR(40),
-    id_ia INT
-    activo BOOLEAN
+    nombre VARCHAR(40) NOT NULL,
+    id_ia INT NOT NULL,
+    activo BOOLEAN NOT NULL
 );

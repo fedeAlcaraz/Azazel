@@ -1,7 +1,7 @@
 namespace Azazel_api.Models;
 public class ModeloIaModel
 {
-    public string Nombre {get; set;}
-    public int Id_IA {get; set;}
-    public bool Activo {get; set;}
+    public required string Nombre {get; set;}
+    public required int Id_IA {get; set;}
+    public required bool Activo {get; set;}
 }

@@ -1,6 +1,6 @@
 namespace Azazel_api.DTOs;
 public class UsuarioDTO
 {
-    public string Nombre {get; set;}
-    public int IdUsuario {get; set;}
+    public required string Nombre {get; set;}
+    public required int IdUsuario {get; set;}
 }

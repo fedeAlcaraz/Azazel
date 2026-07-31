@@ -1,7 +1,7 @@
 namespace Azazel_api.DTOs;
 public class ModeloIaDTO
 {
-    public string Nombre {get; set;}
-    public int Id_IA {get; set;}
-    public bool Activo {get; set;}
+    public required string Nombre {get; set;}
+    public required int Id_IA {get; set;}
+    public required bool Activo {get; set;}
 }
