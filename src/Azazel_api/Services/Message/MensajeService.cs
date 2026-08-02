@@ -1,27 +1,44 @@
-namespace Azazel_api.Services.UsuarioService;
+namespace Azazel_api.Services.MessageService;
+
+using Azazel_api.DTOs;
 using Azazel_api.Models;
-using Azazel_api.Repository.User;
+using Azazel_api.Repository.Message;
 
-public class MensajeService : IUsuarioService
+public class MensajeService : IMessageService
 {
-    private readonly IUserRepository _repository;
+    private readonly IMensajeRepository _repository;
 
-    public MensajeService(IUserRepository repository)
+    public MensajeService(IMensajeRepository repository)
     {
         _repository = repository;
     }
 
-    public List<UsuarioModel> GetAll()
+    public List<MensajeModel> GetAll()
         => _repository.GetAll();
 
-    public UsuarioModel? GetById(int id)
+    public MensajeModel? GetById(int id)
         => _repository.GetById(id);
 
-    public void Create(UsuarioModel usuario)
-        => _repository.Create(usuario);
+    public void Create(MensajeDTO mensaje){
+        var mensajeModel = new MensajeModel
+        {
+            IdMensaje = mensaje.IdMensaje,
+            IdConversacion = mensaje.IdConversacion,
+            Emisor = mensaje.emisor,
+            Contenido = mensaje.Contenido,
+            Success = mensaje.Success,
+            FechaHora = mensaje.FechaHora
+        };
+        _repository.Create(mensajeModel);
+    }
+    public void Update(int id, MensajeDTO mensaje)
+    {
+        var obtenerMensaje = _repository.GetById(id);
 
-    public void Update(UsuarioModel usuario)
-        => _repository.Update(usuario);
+    if (obtenerMensaje == null)
+        throw new Exception("Mensaje no encontrado.");
+    _repository.Update(obtenerMensaje);
+    } 
 
     public void Delete(int id)
         => _repository.Delete(id);

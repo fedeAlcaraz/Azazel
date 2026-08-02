@@ -12,7 +12,7 @@ public class Configuration : IEntityTypeConfiguration<MensajeModel>{
         builder.Property(x => x.IdConversacion)
                .HasColumnName("id_conversacion");
         builder.Property(x => x.Emisor)
-               .HasColumnName("emisor");
+               .HasColumnName("Emisor");
         builder.Property(x => x.Contenido)
                .HasColumnName("contenido");
         builder.Property(x => x.Success)

@@ -1,4 +1,6 @@
 namespace Azazel_api.Services.UsuarioService;
+
+using Azazel_api.DTOs;
 using Azazel_api.Models;
 using Azazel_api.Repository.User;
 
@@ -17,12 +19,23 @@ public class UsuarioService : IUsuarioService
     public UsuarioModel? GetById(int id)
         => _repository.GetById(id);
 
-    public void Create(UsuarioModel usuario)
-        => _repository.Create(usuario);
+    public void Create(UsuarioDTO usuario){
+        var usuarioModel = new UsuarioModel
+        {
+          IdUsuario = usuario.IdUsuario,
+          Nombre = usuario.Nombre
+        };
+         _repository.Create(usuarioModel);
+    }
 
-    public void Update(UsuarioModel usuario)
-        => _repository.Update(usuario);
+    public void Update(int id, UsuarioDTO dto)
+    {
+    var usuario = _repository.GetById(id);
 
+    if (usuario == null)
+        throw new Exception("Usuario no encontrado.");
+    _repository.Update(usuario);
+    }
     public void Delete(int id)
         => _repository.Delete(id);
 }
