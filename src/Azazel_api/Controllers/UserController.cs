@@ -13,13 +13,13 @@ namespace Azazel_api.Controllers
             _userService = userService;
         }
         [HttpGet]
-        public ActionResult<List<UsuarioDTO>> GetAllUsers()
+        public ActionResult<List<UsuarioDTO>> GetAll()
         {
             var users = _userService.GetAll();
             return Ok(users);
         }
         [HttpGet("{id}")]
-        public ActionResult<UsuarioDTO> GetUserById(int id)
+        public ActionResult<UsuarioDTO> GetById(int id)
         {
             var user = _userService.GetById(id);
             if (user == null)
@@ -41,6 +41,19 @@ namespace Azazel_api.Controllers
             {
                 _userService.Update(id, usuario);
                 return Ok("usuario actualizado correctamente");
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                _userService.Delete(id);
+                return Ok("usuario eliminado correctamente");
             }
             catch (Exception ex)
             {

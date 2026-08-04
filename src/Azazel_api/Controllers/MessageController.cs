@@ -29,6 +29,12 @@ namespace Azazel_api.Controllers
             }
             return Ok(mensaje);
         }
+        [HttpPost]
+        public ActionResult<MensajeDTO> Create (MensajeDTO mensaje)
+        {
+            _messageService.Create(mensaje);
+            return Ok("mensaje creado correctamente");
+        }
         [HttpPut("{id}")]
         public ActionResult UpdateMessage(int id, MensajeDTO mensaje)
         {
@@ -36,6 +42,19 @@ namespace Azazel_api.Controllers
             {
                 _messageService.Update(id, mensaje);
                 return Ok("usuario actualizado correctamente");
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                _messageService.Delete(id);
+                return Ok("mensaje eliminado correctamente");
             }
             catch (Exception ex)
             {

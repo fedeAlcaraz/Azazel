@@ -29,5 +29,36 @@ namespace Azazel_api.Controllers
             }
             return Ok(conversacion);
         }
+        [HttpPost]
+        public ActionResult<ConversacionDTO> Create (ConversacionDTO conversacion)
+        {
+            _ConversationService.Create(conversacion);
+            return Ok("conversacion creada correctamente");
+        }
+        [HttpPut("{id}")]
+        public ActionResult Update(int id, ConversacionDTO conversacion)
+        {
+            try
+            {
+                _ConversationService.Update(id, conversacion);
+                return Ok("conversacion actualizada correctamente");
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                _ConversationService.Delete(id);
+                return Ok("conversacion eliminada correctamente");
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
     }
 }
