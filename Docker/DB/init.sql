@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS conversaciones(
     id_conversacion SERIAL PRIMARY KEY,
     dir VARCHAR(100) NOT NULL,
     date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    date_lastMessage TIMESTAMP NULL
+    date_last_message TIMESTAMP NULL
 );
 CREATE TABLE IF NOT EXISTS memorias(
     id_memoria SERIAL PRIMARY KEY,
@@ -29,7 +29,8 @@ CREATE TABLE IF NOT EXISTS mensajes(
     id_mensaje SERIAL PRIMARY KEY,
     id_conversacion INT NOT NULL,
     FOREIGN KEY (id_conversacion) REFERENCES conversaciones(id_conversacion),
-    emisor BOOLEAN NOT NULL,
+    id_usuario int NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
     contenido TEXT NOT NULL,
     success BOOLEAN NOT NULL,
     fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP

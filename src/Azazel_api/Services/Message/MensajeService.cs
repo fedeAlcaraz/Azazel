@@ -24,7 +24,7 @@ public class MensajeService : IMessageService
         {
             IdMensaje = mensaje.IdMensaje,
             IdConversacion = mensaje.IdConversacion,
-            Emisor = mensaje.emisor,
+            IdUsuario = mensaje.IdUsuario,
             Contenido = mensaje.Contenido,
             Success = mensaje.Success,
             FechaHora = mensaje.FechaHora

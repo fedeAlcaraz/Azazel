@@ -24,7 +24,12 @@ public class ConversacionRepositoryEF : IConversacionRepository
     }
     public void Update(ConversacionModel conversacion)
     {
-        _context.Conversaciones.Update(conversacion);
+        _context.Conversaciones.Attach(conversacion);
+
+        _context.Entry(conversacion)
+                .Property(c => c.ConversacionDir)
+                .IsModified = true;
+
         _context.SaveChanges();
     }
     public void Delete(int id)

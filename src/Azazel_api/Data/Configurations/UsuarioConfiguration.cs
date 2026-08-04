@@ -8,9 +8,10 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<UsuarioModel>{
         builder.ToTable("usuarios");
         builder.HasKey(x => x.IdUsuario);
         builder.Property(x => x.IdUsuario)
-               .HasColumnName("id_usuario");
+               .HasColumnName("id_usuario")
+               .ValueGeneratedOnAdd();
         builder.Property(x => x.Nombre)
-               .HasColumnName("Nombre")
+               .HasColumnName("nombre")
                .HasMaxLength(40);
     }
 }

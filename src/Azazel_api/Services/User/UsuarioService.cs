@@ -34,6 +34,7 @@ public class UsuarioService : IUsuarioService
 
     if (usuario == null)
         throw new Exception("Usuario no encontrado.");
+    usuario.Nombre = dto.Nombre;
     _repository.Update(usuario);
     }
     public void Delete(int id)

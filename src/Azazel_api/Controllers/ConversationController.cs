@@ -48,6 +48,7 @@ namespace Azazel_api.Controllers
                 return NotFound(ex.Message);
             }
         }
+        [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
             try

@@ -8,7 +8,8 @@ public class ModeloIAConfiguration : IEntityTypeConfiguration<ModeloIAModel>{
         builder.ToTable("modelosIA");
         builder.HasKey(x => x.Id_IA);
         builder.Property(x => x.Id_IA)
-               .HasColumnName("id_ia");
+               .HasColumnName("id_ia")
+               .ValueGeneratedOnAdd();
         builder.Property(x => x.Nombre)
                .HasColumnName("nombre")
                .HasMaxLength(40);

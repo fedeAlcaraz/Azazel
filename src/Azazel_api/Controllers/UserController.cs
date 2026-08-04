@@ -60,6 +60,5 @@ namespace Azazel_api.Controllers
                 return NotFound(ex.Message);
             }
         }
-
     }
 }

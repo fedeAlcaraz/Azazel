@@ -34,10 +34,12 @@ public class ConversacionService : IConversationService
     public void Update(int id, ConversacionDTO conversacion)
     {
         var obtenerConversacion = _repository.GetById(id);
-    if (obtenerConversacion == null)
-        throw new Exception("Mensaje no encontrado.");
+
+        if (obtenerConversacion == null)
+            throw new Exception("Conversación no encontrada.");
+    obtenerConversacion.ConversacionDir = conversacion.ConversacionDir;
     _repository.Update(obtenerConversacion);
-    } 
+    }
     public void Delete(int id)
         => _repository.Delete(id);
 }

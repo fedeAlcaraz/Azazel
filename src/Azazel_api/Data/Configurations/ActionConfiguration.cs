@@ -9,7 +9,8 @@ public class AccionConfiguration : IEntityTypeConfiguration<AccionModel>
         builder.ToTable("acciones");
         builder.HasKey(x => x.IdAccion);
         builder.Property(x => x.IdAccion)
-               .HasColumnName("id_accion");
+               .HasColumnName("id_accion")
+               .ValueGeneratedOnAdd();
         builder.Property(x => x.IdUsuario)
                .HasColumnName("id_usuario");
         builder.Property(x => x.IdConversacion)

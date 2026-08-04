@@ -24,7 +24,6 @@ public class UsuarioRepositoryEF : IUserRepository
     }
     public void Update(UsuarioModel usuario)
     {
-        _context.Usuarios.Update(usuario);
         _context.SaveChanges();
     }
     public void Delete(int id)

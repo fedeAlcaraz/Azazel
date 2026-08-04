@@ -8,7 +8,8 @@ public class MemoriaConfiguration : IEntityTypeConfiguration<MemoriaModel>{
         builder.ToTable("memorias");
         builder.HasKey(x => x.IdMemoria);
         builder.Property(x => x.IdMemoria)
-               .HasColumnName("id_memoria");
+               .HasColumnName("id_memoria")
+               .ValueGeneratedOnAdd();
         builder.Property(x => x.IdConversacion)
                .HasColumnName("id_conversacion");
         builder.Property(x => x.MemoriaDir)
