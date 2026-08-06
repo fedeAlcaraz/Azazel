@@ -7,4 +7,5 @@ public class MensajeDTO
     public required string Contenido {get; set;}
     public required bool Success {get; set;}
     public DateTime FechaHora {get; set;}
+    public required string Emisor {get; set;}
 }

@@ -1,4 +1,5 @@
 namespace Azazel_api.Repository.Message;
+using Microsoft.EntityFrameworkCore;
 using Azazel_api.Data;
 using Azazel_api.Models;
 public class MensajeRepositoryEF : IMensajeRepository
@@ -10,6 +11,8 @@ public class MensajeRepositoryEF : IMensajeRepository
     }
     public List<MensajeModel> GetAll()
     {
+        var query = _context.Mensajes.AsQueryable();
+        Console.WriteLine(query.ToQueryString());
         return _context.Mensajes.ToList();
     }
     public MensajeModel? GetById(int id)

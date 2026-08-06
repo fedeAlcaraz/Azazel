@@ -7,4 +7,6 @@ public class MensajeModel
     public required string Contenido {get; set;}
     public required bool Success {get; set;}
     public required DateTime FechaHora {get; set;}
+    public required string Emisor {get; set;}
+    public ConversacionModel Conversacion { get; set; } = null!;
 }

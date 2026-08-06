@@ -33,7 +33,8 @@ CREATE TABLE IF NOT EXISTS mensajes(
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
     contenido TEXT NOT NULL,
     success BOOLEAN NOT NULL,
-    fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    fecha_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    emisor VARCHAR(20) NOT NULL
 );
 CREATE TABLE IF NOT EXISTS modelosIA(
     id_ia SERIAL PRIMARY KEY,

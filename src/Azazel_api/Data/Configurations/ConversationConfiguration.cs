@@ -20,5 +20,6 @@ public class ConversationConfiguration : IEntityTypeConfiguration<ConversacionMo
         builder.Property(x => x.LastMessage)
                .HasColumnName("date_last_message")
                .ValueGeneratedNever();
+       
     }
 }

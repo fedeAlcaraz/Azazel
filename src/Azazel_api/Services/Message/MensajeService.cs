@@ -27,7 +27,8 @@ public class MensajeService : IMessageService
             IdUsuario = mensaje.IdUsuario,
             Contenido = mensaje.Contenido,
             Success = mensaje.Success,
-            FechaHora = mensaje.FechaHora
+            FechaHora = mensaje.FechaHora,
+            Emisor = mensaje.Emisor
         };
         _repository.Create(mensajeModel);
     }
